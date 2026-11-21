@@ -63,7 +63,7 @@ L1 关键合约（2026-11-19 重建，`deploy/state.json` 为准；旧 STATUS.md
 ## 系统要求
 
 - Linux x86_64（Ubuntu 22.04/24.04 实测），Go 1.27.4（安装脚本自动装）
-- 4 核 CPU、8 GB 内存、50 GB 可用磁盘（全量同步后 datadir 约 1 GB，
+- 4 核 CPU、8 GB 内存、50 GB 可用磁盘（全量同步后 datadir 约 3 GB（2026-11-21 验证节点实测 119,762 块时 3.0 GB），
   随链增长；archive 模式不要开）
 - 能访问站长的 L1 RPC（见上文三样条件）与 sequencer p2p 端口
 - `curl`、`git`、`python3`、`openssl`、`jq`（可选）
