@@ -1,0 +1,28 @@
+# Secrets - never commit
+*.key
+jwt.txt
+p2p-priv.txt
+*l1-pw*
+.alchemy-key.json
+.deployer-testnet.json
+*token*
+*bindingKey*
+# Data directories
+*-data/
+peerstore/
+opnode_discovery_db/
+l2-data/
+l1-data/
+l1-dev-data/
+op-node-data/
+# Logs
+logs/
+*.log
+# Build outputs / sources (rebuilt by scripts/build-op-stack.sh)
+bin/
+src/
+go/
+# Local genesis copy (downloaded from release; the summary is in genesis/)
+genesis/genesis.json
+# Local overrides
+.env

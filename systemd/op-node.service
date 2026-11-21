@@ -1,0 +1,19 @@
+[Unit]
+Description=Eterna op-node (verifier, read-only replica)
+After=op-geth-l2.service network-online.target
+Requires=op-geth-l2.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=%USER%
+Environment=ETERNA_HOME=%ETERNA_HOME%
+Environment=L1_RPC_URL=%L1_RPC_URL%
+Environment=SEQUENCER_P2P_MULTIADDR=%SEQUENCER_P2P_MULTIADDR%
+ExecStart=%ETERNA_HOME%/bin/op-node --l1 %L1_RPC_URL% --l2 http://127.0.0.1:9551 --rollup.config %ETERNA_HOME%/config/rollup.json --rollup.l1-chain-config %ETERNA_HOME%/config/l1-chain-config.json --l1.beacon.ignore --rpc.addr 127.0.0.1 --rpc.port 8547 --rpc.enable-admin --l2.jwt-secret %ETERNA_HOME%/config/jwt.txt --l2.enginekind geth --verifier.l1-confs 1 --l1.trustrpc --l1.rpckind basic --l1.http-poll-interval 2s --p2p.priv.path %ETERNA_HOME%/config/p2p-priv.txt --p2p.peerstore.path %ETERNA_HOME%/op-node-data/peerstore --p2p.static %SEQUENCER_P2P_MULTIADDR% --p2p.listen.ip 127.0.0.1 --p2p.listen.tcp 9222 --p2p.listen.udp 9222 --p2p.advertise.ip 127.0.0.1
+Restart=on-failure
+RestartSec=10
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,16 @@
+[Unit]
+Description=Eterna L2 execution layer (op-geth, verifier node)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=%USER%
+Environment=ETERNA_HOME=%ETERNA_HOME%
+ExecStart=%ETERNA_HOME%/bin/op-geth --datadir %ETERNA_HOME%/l2-data --networkid 42069 --http --http.addr 127.0.0.1 --http.port 9545 --http.api eth,net,web3 --http.corsdomain "*" --ws --ws.addr 127.0.0.1 --ws.port 9546 --ws.api eth,net,web3 --authrpc.addr 127.0.0.1 --authrpc.port 9551 --authrpc.vhosts "*" --authrpc.jwtsecret %ETERNA_HOME%/config/jwt.txt --syncmode full --gcmode full --nodiscover --maxpeers 0
+Restart=on-failure
+RestartSec=10
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target

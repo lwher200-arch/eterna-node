@@ -1,0 +1,7 @@
+{
+  "l1-deployer": "0xa8f5eef937a880a14887aff2936f62a72205449a",
+  "sequencer": "0x817235b5d912674f3d07ba3a6b7f13ed249aeb96",
+  "batcher": "0x39ac66869f28096f06c2b4ee9ff9e2309d42269d",
+  "proposer": "0xd26fdd8e65488db180d08977db5801c69d4ede69",
+  "challenger": "0xf38fde6304858090b53708626d6109355d0ff42f"
+}

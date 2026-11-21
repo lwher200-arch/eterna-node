@@ -1,0 +1,28 @@
+{
+  "opcmStandardValidatorAddress": "0x4f5adbd528eedb8fbeb0b64f6129309851841fc1",
+  "opcmUtilsAddress": "0xe1ea0f70fda205fdfeec770a259e4c34c0f7c4c6",
+  "opcmMigratorAddress": "0x5b42ab3d7cb6c6da53b3d5c148ff34cd998afac0",
+  "opcmV2Address": "0x01f13c5db990c7e533dd5f75fd0c22c4b59664cd",
+  "opcmContainerAddress": "0xefb3141314fef7ad1b7c84c0d3df16b63b3dc760",
+  "delayedWETHImplAddress": "0xf024e96317907c3b8d8cb346b9fd9034c8640e15",
+  "optimismPortalImplAddress": "0xb20b23af6071405c37ddda0c0640e8ebb7899645",
+  "ethLockboxImplAddress": "0xdf75e6b07e98873e36ba5c05508f80c1454e0afe",
+  "preimageOracleSingletonAddress": "0x1e1d73536a081ef2f355d29794547a9770aeb1e0",
+  "mipsSingletonAddress": "0xacc005dcd857b401e4732e6f7837135a22825cfa",
+  "systemConfigImplAddress": "0xade27248542c0f3e89b49e4eb76155e267f14377",
+  "l1CrossDomainMessengerImplAddress": "0x7d4ec7fb1a1b9e6d61c04d5e21e3d68cff639448",
+  "l1ERC721BridgeImplAddress": "0x9f164f1d02a81e06d639e55f65a87f0070e3cb2e",
+  "l1StandardBridgeImplAddress": "0xb37a11aadf167b2f0b8dd85372de4bc66cd4a891",
+  "optimismMintableERC20FactoryImplAddress": "0xaabea75da509fa518fd8a91eae4be5813b829b12",
+  "disputeGameFactoryImplAddress": "0x72b971717e088b59f26d4236be222adb6acd393b",
+  "anchorStateRegistryImplAddress": "0x2b27299c577d4720100e2735b652444dcea652d0",
+  "superchainConfigImplAddress": "0xa303a644cfbc0c34f6a9dbeafdeba4c967ea01e7",
+  "faultDisputeGameImplAddress": "0x2dda3584b51ef5236f7726dea5a0fb6b3ca94aec",
+  "permissionedDisputeGameImplAddress": "0xe1dffcbe4e22b813f26d2106d943c102e7cab87e",
+  "superFaultDisputeGameImplAddress": "0x19af533cc2a2a55786dcb8672aa5717e64213208",
+  "superPermissionedDisputeGameImplAddress": "0x5c3eb47cb0174aea522a2a9ae79487139a53d691",
+  "zkDisputeGameImplAddress": "0x0000000000000000000000000000000000000000",
+  "storageSetterImplAddress": "0x2476c911e6d4d9411e677d8faf15a64ac1fdeee8",
+  "sp1PlonkAdapterSingletonAddress": "0x0000000000000000000000000000000000000000"
+}
+
