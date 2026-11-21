@@ -245,6 +245,7 @@ AI 账号体系——**目前没有专门的“节点”账号类型**，节点�
 | 现象 | 处理 |
 | --- | --- |
 | 端口被占用（9545/8547/9222 等） | `ss -ltnp \| grep <端口>` 找旧进程；`scripts/stop.sh` 先停干净再起；不要起两个实例 |
+| `listen tcp :30303: bind: address already in use` | 同机已有 geth 在跑：本仓库启动脚本已带 `--port 0`（verifier 不需要 geth p2p 监听）；如用旧脚本，加 `--port <空闲端口>` 或 `--port 0` |
 | op-node 报 `possible L1 re-org` | L1 2 秒一块，head 信号常跳 2 块，属正常现象（主节点也一样），不是真 reorg |
 | derivation 长时间不出 payload | 正常：op-node 先从 L1 创世 walk back，再正向推导；het 实测约 1.5–2 小时；`--l1.http-poll-interval 2s` 已设 |
 | `getPayloadV5 / Unsupported fork` | op-geth 版本不对：必须 1.101702.4-rc.1（1.101702.3 缺 Engine API V5） |
